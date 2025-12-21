@@ -40,6 +40,15 @@
         .btn-green-glow { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
         @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-slide { animation: slideIn 0.6s ease-out forwards; }
+        
+        /* Utility for SPA views */
+        .page-view { display: none; }
+        .page-view.active { display: block; }
+
+        .sitemap-link { @apply text-slate-300 hover:text-brand-blue transition-colors flex items-center space-x-2 py-1; }
+        
+        /* Back to top transition */
+        #back-to-top { transition: opacity 0.3s, transform 0.3s; }
     </style>
 </head>
 <body class="text-slate-200">
@@ -48,221 +57,491 @@
     <header class="fixed w-full z-50 glass">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center group cursor-pointer">
-                <!-- Carré 'A' retiré -->
-                <span class="text-xl font-bold tracking-tighter text-white uppercase group-hover:text-brand-blue transition">Aigyros</span>
+                <a href="#" onclick="showPage('home')" class="text-xl font-bold tracking-tighter text-white uppercase group-hover:text-brand-blue transition">Aigyros</a>
             </div>
             <div class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-                <a href="#expertise" class="hover:text-brand-blue transition">Expertise</a>
-                <a href="#methodes" class="hover:text-brand-blue transition">Méthodes</a>
-                <a href="#solutions" class="hover:text-brand-blue transition">Solutions</a>
-                <a href="#faq" class="hover:text-brand-blue transition">FAQ</a>
+                <a href="#expertise" onclick="showPage('home')" class="hover:text-brand-blue transition">Expertise</a>
+                <a href="#methodes" onclick="showPage('home')" class="hover:text-brand-blue transition">Méthodes</a>
+                <a href="#solutions" onclick="showPage('home')" class="hover:text-brand-blue transition">Solutions</a>
+                <a href="#faq" onclick="showPage('faq')" class="hover:text-brand-blue transition">FAQ</a>
             </div>
             <a href="https://calendly.com/aigyros/30min" target="_blank" class="hidden md:block bg-brand-blue hover:bg-cyan-500 text-white px-6 py-2 rounded-full text-xs font-bold transition uppercase tracking-widest shadow-lg shadow-brand-blue/20 text-center">Prendre rendez-vous</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 hero-gradient overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-full text-xs font-bold mb-8 animate-slide">
-                <span class="flex h-2 w-2 rounded-full bg-brand-green"></span>
-                <span class="text-slate-300 uppercase tracking-widest">Partenaire de votre Résilience Numérique</span>
-            </div>
-            <h1 class="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-6 animate-slide" style="animation-delay: 0.1s">
-                Maîtrisez Votre <span class="text-brand-blue">Conformité RGAA</span> :<br>
-                La Certitude au Service de Votre Image.
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide" style="animation-delay: 0.2s">
-                Depuis le 28 juin 2025, les obligations d'accessibilité numérique sont renforcées. Évitez les sanctions <strong>DGCCRF/ARCOM (jusqu'à 50 000 €)</strong> et transformez cette obligation en avantage compétitif.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 animate-slide" style="animation-delay: 0.3s">
-                <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full md:w-auto bg-brand-green hover:bg-brand-emerald text-white px-10 py-5 rounded-xl text-lg font-bold transition-all transform hover:scale-105 btn-green-glow uppercase text-center">
-                    Découvrir mon Diagnostic Flash Gratuit
-                </a>
-                <a href="#solutions" class="w-full md:w-auto bg-slate-800/50 hover:bg-slate-700 text-white px-10 py-5 rounded-xl text-lg font-bold border border-slate-700 transition">
-                    Nos Programmes d'Audit
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Metrics Section -->
-    <section id="expertise" class="py-24 bg-brand-dark">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue/20 transition">
-                        <i class="fa-solid fa-file-shield text-brand-blue text-2xl"></i>
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        
+        <!-- HOME PAGE VIEW -->
+        <div id="home-page" class="page-view active">
+            <!-- Hero Section -->
+            <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 hero-gradient overflow-hidden">
+                <div class="container mx-auto px-6 relative z-10 text-center">
+                    <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-full text-xs font-bold mb-8 animate-slide">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-green"></span>
+                        <span class="text-slate-300 uppercase tracking-widest">Partenaire de votre Résilience Numérique</span>
                     </div>
-                    <div class="text-4xl font-black text-white mb-2">500+</div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Audits de résilience réalisés</p>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green/20 transition">
-                        <i class="fa-solid fa-circle-check text-brand-green text-2xl"></i>
-                    </div>
-                    <div class="text-4xl font-black text-brand-green mb-2">98%</div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">De conformité atteinte</p>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-700 transition">
-                        <i class="fa-solid fa-calendar-check text-slate-400 text-2xl"></i>
-                    </div>
-                    <div class="text-4xl font-black text-white mb-2">10+ ans</div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">D'expertise IT & Accessibilité</p>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-red-900/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-800/30 transition border border-red-900/30 text-red-500">
-                        <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
-                    </div>
-                    <div class="text-4xl font-black text-red-500 mb-2">50 000 €</div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Protection contre sanctions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem / Solution Section -->
-    <section id="methodes" class="py-24 bg-slate-950">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2 space-y-8">
-                    <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
-                        L'automatisation ne suffit plus.<br>
-                        <span class="text-brand-blue">L'expertise humaine est votre rempart.</span>
-                    </h2>
-                    <p class="text-slate-400 text-lg leading-relaxed font-light">
-                        Les outils de scan automatisés ne détectent que <strong>30 à 50% des critères RGAA</strong>. Une conformité réelle exige des tests manuels sur les parcours critiques (formulaires, checkout, navigation clavier).
+                    <h1 class="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-6 animate-slide" style="animation-delay: 0.1s">
+                        Maîtrisez Votre <span class="text-brand-blue">Conformité RGAA</span> :<br>
+                        La Certitude au Service de Votre Image.
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide" style="animation-delay: 0.2s">
+                        Depuis le 28 juin 2025, les obligations d'accessibilité numérique sont renforcées. Évitez les sanctions <strong>DGCCRF/ARCOM (jusqu'à 50 000 €)</strong> et transformez cette obligation en avantage compétitif.
                     </p>
-                    
-                    <div class="space-y-6 bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Indicateurs de Maîtrise</h4>
-                        <div>
-                            <div class="flex justify-between text-sm mb-2"><span class="text-white">Conformité RGAA (Audit Expert Aigyros)</span> <span class="text-brand-green">100%</span></div>
-                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-brand-green" style="width: 100%"></div>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 animate-slide" style="animation-delay: 0.3s">
+                        <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full md:w-auto bg-brand-green hover:bg-brand-emerald text-white px-10 py-5 rounded-xl text-lg font-bold transition-all transform hover:scale-105 btn-green-glow uppercase text-center">
+                            Découvrir mon Diagnostic Flash Gratuit
+                        </a>
+                        <a href="#solutions" class="w-full md:w-auto bg-slate-800/50 hover:bg-slate-700 text-white px-10 py-5 rounded-xl text-lg font-bold border border-slate-700 transition">
+                            Nos Programmes d'Audit
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Metrics -->
+            <section id="expertise" class="py-24 bg-brand-dark">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue/20 transition">
+                                <i class="fa-solid fa-file-shield text-brand-blue text-2xl"></i>
                             </div>
+                            <div class="text-4xl font-black text-white mb-2">500+</div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Audits de résilience réalisés</p>
                         </div>
-                        <div>
-                            <div class="flex justify-between text-sm mb-2"><span class="text-white">Scan Automatisé Classique</span> <span class="text-red-400">35%</span></div>
-                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-red-500" style="width: 35%"></div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green/20 transition">
+                                <i class="fa-solid fa-circle-check text-brand-green text-2xl"></i>
                             </div>
+                            <div class="text-4xl font-black text-brand-green mb-2">98%</div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">De conformité atteinte</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-700 transition">
+                                <i class="fa-solid fa-calendar-check text-slate-400 text-2xl"></i>
+                            </div>
+                            <div class="text-4xl font-black text-white mb-2">10+ ans</div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">D'expertise IT & Accessibilité</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-red-900/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-800/30 transition border border-red-900/30 text-red-500">
+                                <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
+                            </div>
+                            <div class="text-4xl font-black text-red-500 mb-2">50 000 €</div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Protection contre sanctions</p>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2">
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 italic relative">
-                            <i class="fa-solid fa-quote-left text-brand-blue/20 text-5xl absolute top-4 left-4"></i>
-                            <p class="text-slate-300 relative z-10 font-light">"Aigyros a transformé notre vision de l'accessibilité. Au-delà de la conformité légale, nous avons gagné en parts de marché auprès des seniors."</p>
-                            <div class="mt-6 flex items-center space-x-4">
-                                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center">
-                                    <i class="fa-solid fa-user text-slate-400"></i>
+            </section>
+
+            <!-- Problem / Solution Section -->
+            <section id="methodes" class="py-24 bg-slate-950">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row gap-16 items-center">
+                        <div class="lg:w-1/2 space-y-8">
+                            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                                L'automatisation ne suffit plus.<br>
+                                <span class="text-brand-blue">L'expertise humaine est votre rempart.</span>
+                            </h2>
+                            <p class="text-slate-400 text-lg leading-relaxed font-light">
+                                Les outils de scan automatisés ne détectent que <strong>30 à 50% des critères RGAA</strong>. Une conformité réelle exige des tests manuels sur les parcours critiques (formulaires, checkout, navigation clavier).
+                            </p>
+                            
+                            <div class="space-y-6 bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
+                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Indicateurs de Maîtrise</h4>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-2"><span class="text-white">Conformité RGAA (Audit Expert Aigyros)</span> <span class="text-brand-green">100%</span></div>
+                                    <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-brand-green" style="width: 100%"></div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <p class="text-white font-bold text-sm">Dirigeant e-commerce</p>
-                                    <p class="text-slate-500 text-xs uppercase tracking-widest">Secteur Retail Luxe</p>
+                                    <div class="flex justify-between text-sm mb-2"><span class="text-white">Scan Automatisé Classique</span> <span class="text-red-400">35%</span></div>
+                                    <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-red-500" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 italic relative">
+                                    <i class="fa-solid fa-quote-left text-brand-blue/20 text-5xl absolute top-4 left-4"></i>
+                                    <p class="text-slate-300 relative z-10 font-light">"Aigyros a transformé notre vision de l'accessibilité. Au-delà de la conformité légale, nous avons gagné en parts de marché auprès des seniors."</p>
+                                    <div class="mt-6 flex items-center space-x-4">
+                                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center">
+                                            <i class="fa-solid fa-user text-slate-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-bold text-sm">Dirigeant e-commerce</p>
+                                            <p class="text-slate-500 text-xs uppercase tracking-widest">Secteur Retail Luxe</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Solutions / Pricing Section -->
+            <section id="solutions" class="py-24 bg-brand-dark">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Votre Parcours vers l'Élite Numérique</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto">Des solutions dimensionnées pour sécuriser votre impact et votre conformité.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Offered -->
+                        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-brand-blue transition-all group">
+                            <div class="text-brand-blue font-bold mb-4 uppercase tracking-widest text-[10px]">Audit Initial</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Diagnostic Flash</h3>
+                            <div class="text-3xl font-black text-brand-green mb-2 uppercase">Offert</div>
+                            <p class="text-xs text-slate-500 mb-8 italic">Analyse de vos 3 pages critiques (valeur 490 €).</p>
+                            <ul class="space-y-4 mb-10 text-sm flex-grow">
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Rapport de 3 pages</li>
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Identification failles majeures</li>
+                            </ul>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest group-hover:scale-105 text-center shadow-lg shadow-brand-green/20">Commencer</a>
+                        </div>
+
+                        <!-- Standard (Recommended) -->
+                        <div class="bg-slate-900 border border-brand-green p-8 rounded-3xl flex flex-col scale-105 shadow-2xl shadow-brand-green/10 relative z-10">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-green text-[10px] font-bold px-4 py-1 rounded-full text-white uppercase tracking-widest">Recommandé</div>
+                            <div class="text-brand-green font-bold mb-4 uppercase tracking-widest text-[10px]">Légal & Image</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Audit Standard</h3>
+                            <div class="text-3xl font-black text-white mb-2">2 000 € <span class="text-sm text-slate-500 font-normal italic">HT</span></div>
+                            <p class="text-xs text-slate-400 mb-8 leading-relaxed">Conformité RGAA complète et attestation officielle pour sites institutionnels.</p>
+                            <ul class="space-y-4 mb-10 text-sm flex-grow">
+                                <li class="flex items-center text-slate-300 font-medium"><i class="fa-solid fa-check text-brand-green mr-3"></i> Attestation de conformité</li>
+                                <li class="flex items-center text-slate-300 font-medium"><i class="fa-solid fa-check text-brand-green mr-3"></i> Support remédiation 30j</li>
+                            </ul>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest hover:bg-brand-emerald text-center shadow-lg shadow-brand-green/20">Choisir Standard</a>
+                        </div>
+
+                        <!-- Premium -->
+                        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-brand-blue transition-all group">
+                            <div class="text-brand-blue font-bold mb-4 uppercase tracking-widest text-[10px]">Protection Totale</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Audit Premium</h3>
+                            <div class="text-3xl font-black text-white mb-2">3 500 € <span class="text-sm text-slate-500 font-normal italic">HT</span></div>
+                            <p class="text-xs text-slate-400 mb-8 leading-relaxed">Accompagnement total, support agence web et garantie de remédiation illimitée.</p>
+                            <ul class="space-y-4 mb-10 text-sm flex-grow">
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Coaching développeurs</li>
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Zéro défaut garanti</li>
+                            </ul>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-brand-blue text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto text-center shadow-lg shadow-brand-blue/20">Choisir Premium</a>
+                        </div>
+
+                        <!-- Recurring -->
+                        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-slate-600 transition-all group">
+                            <div class="text-slate-500 font-bold mb-4 uppercase tracking-widest text-[10px]">Continuité</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Sérénité</h3>
+                            <div class="text-3xl font-black text-white mb-2">150 € <span class="text-sm text-slate-500 font-normal">/mois</span></div>
+                            <p class="text-xs text-slate-400 mb-8 leading-relaxed">Monitoring mensuel pour garder votre conformité à jour face aux évolutions web.</p>
+                            <ul class="space-y-4 mb-10 text-sm flex-grow">
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Alertes correctives</li>
+                                <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Veille légale incluse</li>
+                            </ul>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto text-center shadow-lg shadow-slate-700/20">Souscrire</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Solutions / Pricing Section -->
-    <section id="solutions" class="py-24 bg-brand-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Votre Parcours vers l'Élite Numérique</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Des solutions dimensionnées pour sécuriser votre impact et votre conformité.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Offered -->
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-brand-blue transition-all group">
-                    <div class="text-brand-blue font-bold mb-4 uppercase tracking-widest text-[10px]">Audit Initial</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Diagnostic Flash</h3>
-                    <div class="text-3xl font-black text-brand-green mb-2 uppercase">Offert</div>
-                    <p class="text-xs text-slate-500 mb-8 italic">Analyse de vos 3 pages critiques (valeur 490 €).</p>
-                    <ul class="space-y-4 mb-10 text-sm flex-grow">
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Rapport de 3 pages</li>
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Identification failles majeures</li>
-                    </ul>
-                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest group-hover:scale-105 text-center shadow-lg shadow-brand-green/20">Commencer</a>
+        <!-- LEGAL NOTICE PAGE VIEW -->
+        <div id="legal-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="mb-12 text-center lg:text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Retour à l'accueil</span>
+                    </button>
                 </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">Mentions légales</h1>
+                
+                <p class="text-slate-400 mb-12 italic font-light text-lg">
+                    Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique (LCEN) et du Règlement Général sur la Protection des Données (RGPD), voici les mentions légales du site aigyros.com.
+                </p>
+                
+                <div class="space-y-12 text-slate-300 font-light leading-relaxed">
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Éditeur du site</h2>
+                        <p class="font-bold text-brand-blue mb-1 text-lg">AIGYROS</p>
+                        <p><strong>Dirigeant :</strong> Jordan Fouassier</p>
+                        <p><strong>Adresse du siège :</strong> 239 Cours Emile Zola, 69100 Villeurbanne, France</p>
+                        <p><strong>Numéro SIRET :</strong> 75088787900021</p>
+                        <p><strong>Email :</strong> <a href="mailto:contact@aigyros.com" class="hover:text-brand-blue transition">contact@aigyros.com</a></p>
+                        <p><strong>Directeur de la publication :</strong> Jordan Fouassier</p>
+                    </section>
 
-                <!-- Standard (Recommended) -->
-                <div class="bg-slate-900 border border-brand-green p-8 rounded-3xl flex flex-col scale-105 shadow-2xl shadow-brand-green/10 relative z-10">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-green text-[10px] font-bold px-4 py-1 rounded-full text-white uppercase tracking-widest">Recommandé</div>
-                    <div class="text-brand-green font-bold mb-4 uppercase tracking-widest text-[10px]">Légal & Image</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Audit Standard</h3>
-                    <div class="text-3xl font-black text-white mb-2">2 000 € <span class="text-sm text-slate-500 font-normal italic">HT</span></div>
-                    <p class="text-xs text-slate-400 mb-8 leading-relaxed">Conformité RGAA complète et attestation officielle pour sites institutionnels.</p>
-                    <ul class="space-y-4 mb-10 text-sm flex-grow">
-                        <li class="flex items-center text-slate-300 font-medium"><i class="fa-solid fa-check text-brand-green mr-3"></i> Attestation de conformité</li>
-                        <li class="flex items-center text-slate-300 font-medium"><i class="fa-solid fa-check text-brand-green mr-3"></i> Support remédiation 30j</li>
-                    </ul>
-                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest hover:bg-brand-emerald text-center shadow-lg shadow-brand-green/20">Choisir Standard</a>
-                </div>
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Hébergeur</h2>
+                        <p class="font-bold text-white mb-1">Vercel Inc.</p>
+                        <p>340 S Lemon Ave #4133<br>
+                        Walnut, CA 91789<br>
+                        États-Unis</p>
+                        <p><strong>Site web :</strong> <a href="https://vercel.com" target="_blank" class="hover:text-brand-blue transition">https://vercel.com</a></p>
+                    </section>
 
-                <!-- Premium -->
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-brand-blue transition-all group">
-                    <div class="text-brand-blue font-bold mb-4 uppercase tracking-widest text-[10px]">Protection Totale</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Audit Premium</h3>
-                    <div class="text-3xl font-black text-white mb-2">3 500 € <span class="text-sm text-slate-500 font-normal italic">HT</span></div>
-                    <p class="text-xs text-slate-400 mb-8 leading-relaxed">Accompagnement total, support agence web et garantie de remédiation illimitée.</p>
-                    <ul class="space-y-4 mb-10 text-sm flex-grow">
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Coaching développeurs</li>
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Zéro défaut garanti</li>
-                    </ul>
-                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-brand-blue text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto text-center shadow-lg shadow-brand-blue/20">Choisir Premium</a>
-                </div>
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Données personnelles (RGPD)</h2>
+                        <p class="mb-4">Les données collectées via le formulaire de contact ou "Diagnostic Flash Gratuit" (nom, prénom, email professionnel, URL du site) servent exclusivement à traiter votre demande d’audit ou de diagnostic RGAA et à vous recontacter dans un cadre commercial.</p>
+                        <p class="mb-4"><strong>Base légale :</strong> Intérêt légitime (prospection commerciale) et exécution précontractuelle.</p>
+                        <p class="mb-4">Ces données ne sont pas transmises à des tiers et sont conservées le temps nécessaire au traitement de votre demande (maximum 3 ans en cas d’inactivité).</p>
+                        <p class="mb-4">Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement, de limitation et de portabilité de vos données. Pour les exercer, contactez : <a href="mailto:contact@aigyros.com" class="text-brand-blue hover:underline">contact@aigyros.com</a>.</p>
+                        <p><strong>En cas de réclamation :</strong> CNIL (<a href="https://www.cnil.fr" target="_blank" class="hover:text-brand-blue transition">www.cnil.fr</a>).</p>
+                    </section>
 
-                <!-- Recurring -->
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col hover:border-slate-600 transition-all group">
-                    <div class="text-slate-500 font-bold mb-4 uppercase tracking-widest text-[10px]">Continuité</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Sérénité</h3>
-                    <div class="text-3xl font-black text-white mb-2">150 € <span class="text-sm text-slate-500 font-normal">/mois</span></div>
-                    <p class="text-xs text-slate-400 mb-8 leading-relaxed">Monitoring mensuel pour garder votre conformité à jour face aux évolutions web.</p>
-                    <ul class="space-y-4 mb-10 text-sm flex-grow">
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Alertes correctives</li>
-                        <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Veille légale incluse</li>
-                    </ul>
-                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto text-center shadow-lg shadow-slate-700/20">Souscrire</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Accessibilité numérique</h2>
+                        <p>Ce site s’efforce de respecter le Référentiel Général d’Amélioration de l’Accessibilité (RGAA). Une déclaration d’accessibilité est disponible sur demande à <a href="mailto:contact@aigyros.com" class="text-brand-blue hover:underline">contact@aigyros.com</a>.</p>
+                    </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-slate-950">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center uppercase tracking-widest">Questions Fréquentes</h2>
-            <div class="space-y-6">
-                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-brand-blue transition cursor-default">
-                    <h4 class="text-lg font-bold text-brand-blue mb-3">Quelles sanctions exactes en 2025 pour le privé ?</h4>
-                    <p class="text-slate-400 leading-relaxed text-sm">
-                        La loi impose désormais des sanctions financières pouvant atteindre <strong>50 000 € par service non conforme</strong> pour les entreprises du secteur privé dépassant certains seuils. L'ARCOM et la DGCCRF peuvent effectuer des contrôles inopinés pour vérifier la présence du schéma pluriannuel d'accessibilité.
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Propriété intellectuelle</h2>
+                        <p>Tous les contenus du site (textes, images, logos) sont la propriété exclusive d’AIGYROS ou de ses partenaires. Toute reproduction est interdite sans autorisation préalable.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Loi applicable</h2>
+                        <p>Le présent site est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux français compétents.</p>
+                    </section>
+                    
+                    <p class="pt-8 text-xs text-slate-500 uppercase tracking-widest font-bold text-center lg:text-left">
+                        Date de dernière mise à jour : 21 décembre 2025
                     </p>
                 </div>
-                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
-                    <h4 class="text-lg font-bold text-white mb-3">L'audit est-il certifiant ?</h4>
-                    <p class="text-slate-400 leading-relaxed text-sm">
-                        Oui. En tant que cabinet d'expertise tiers, Aigyros délivre une attestation de conformité RGAA qui est le document légal de référence à publier sur votre site.
-                    </p>
+            </div>
+        </div>
+
+        <!-- PRIVACY POLICY PAGE VIEW (NOUVEAU) -->
+        <div id="privacy-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="mb-12 text-center lg:text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Retour à l'accueil</span>
+                    </button>
                 </div>
-                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
-                    <h4 class="text-lg font-bold text-white mb-3">Est-ce compatible avec mon agence web ?</h4>
-                    <p class="text-slate-400 leading-relaxed text-sm">
-                        Totalement. Nous devenons l'allié technique de votre agence. Nous leur fournissons des rapports actionnables et les guidons dans l'implémentation pour qu'ils se concentrent sur le design.
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient">Politique de confidentialité</h1>
+                
+                <div class="space-y-12 text-slate-300 font-light leading-relaxed">
+                    <p class="text-lg">AIGYROS respecte votre vie privée et s’engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Données collectées</h2>
+                        <p>Via le formulaire "Diagnostic Flash Gratuit" : prénom, nom, email professionnel, URL du site. Ces données sont collectées avec votre consentement explicite pour traiter votre demande de diagnostic RGAA et vous recontacter dans un cadre commercial.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Finalités du traitement</h2>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>Fournir le diagnostic gratuit demandé</li>
+                            <li>Vous recontacter pour proposer nos services (prospection commerciale)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Base légale</h2>
+                        <p>Intérêt légitime (prospection B2B) et exécution précontractuelle.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Durée de conservation</h2>
+                        <p>3 ans maximum à compter du dernier contact, sauf demande de suppression.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Destinataires</h2>
+                        <p>Uniquement Jordan Fouassier (dirigeant AIGYROS). Aucune transmission à des tiers.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Vos droits</h2>
+                        <p class="mb-4">Vous disposez d’un droit d’accès, rectification, opposition, effacement, limitation et portabilité de vos données.</p>
+                        <p>Pour les exercer : <a href="mailto:contact@aigyros.com" class="text-brand-blue hover:underline">contact@aigyros.com</a>. Réclamation possible auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" class="hover:text-brand-blue">www.cnil.fr</a>).</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2">Sécurité</h2>
+                        <p>Les données sont stockées de manière sécurisée chez nos sous-traitants conformes RGPD (Vercel, Resend).</p>
+                    </section>
+                    
+                    <p class="pt-8 text-xs text-slate-500 uppercase tracking-widest font-bold text-center lg:text-left">
+                        Date de dernière mise à jour : 21 décembre 2025
                     </p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- PLAN DU SITE PAGE VIEW -->
+        <div id="sitemap-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="mb-12 text-center lg:text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Retour à l'accueil</span>
+                    </button>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient">Plan du site</h1>
+                
+                <div class="grid md:grid-cols-2 gap-12 text-slate-300">
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-house text-brand-blue mr-3 text-sm"></i> Navigation Principale
+                            </h2>
+                            <ul class="space-y-2 ml-7">
+                                <li><a href="#" onclick="showPage('home')" class="sitemap-link">Accueil</a></li>
+                                <li><a href="#expertise" onclick="showPage('home')" class="sitemap-link">Expertise</a></li>
+                                <li><a href="#methodes" onclick="showPage('home')" class="sitemap-link">Méthodes</a></li>
+                                <li><a href="#solutions" onclick="showPage('home')" class="sitemap-link">Solutions</a></li>
+                                <li><a href="#faq" onclick="showPage('faq')" class="sitemap-link">FAQ</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-briefcase text-brand-blue mr-3 text-sm"></i> Solutions
+                            </h2>
+                            <ul class="space-y-2 ml-7">
+                                <li><a href="https://calendly.com/aigyros/30min" target="_blank" class="sitemap-link">Diagnostic Flash Gratuit</a></li>
+                                <li><a href="https://calendly.com/aigyros/30min" target="_blank" class="sitemap-link">Audit Standard</a></li>
+                                <li><a href="https://calendly.com/aigyros/30min" target="_blank" class="sitemap-link">Audit Premium</a></li>
+                                <li><a href="https://calendly.com/aigyros/30min" target="_blank" class="sitemap-link">Offre Sérénité</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-envelope text-brand-blue mr-3 text-sm"></i> Contact & RDV
+                            </h2>
+                            <ul class="space-y-2 ml-7">
+                                <li><a href="https://calendly.com/aigyros/30min" target="_blank" class="sitemap-link">Prendre rendez-vous (Calendly)</a></li>
+                                <li><a href="mailto:contact@aigyros.com" class="sitemap-link">Contact Email</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-scale-balanced text-brand-blue mr-3 text-sm"></i> Légal
+                            </h2>
+                            <ul class="space-y-2 ml-7">
+                                <li><a href="#mentions-legales" onclick="showPage('legal')" class="sitemap-link">Mentions légales</a></li>
+                                <li><a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="sitemap-link">Politique de confidentialité</a></li>
+                                <li><a href="#faq" onclick="showPage('faq')" class="sitemap-link">Questions fréquentes (FAQ)</a></li>
+                                <li><a href="#plan-du-site" onclick="showPage('sitemap')" class="sitemap-link font-bold text-brand-blue">Plan du site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-20 pt-10 border-t border-slate-800 text-xs text-slate-500 uppercase tracking-widest font-bold text-center lg:text-left">
+                    Date de dernière mise à jour : 21 décembre 2025
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ PAGE VIEW -->
+        <div id="faq-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="mb-12 text-center lg:text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Retour à l'accueil</span>
+                    </button>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-16 uppercase tracking-tighter text-gradient">FAQ – Questions fréquentes</h1>
+                
+                <div class="space-y-6">
+                    <!-- Q1 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">1. Quelles sont les obligations d’accessibilité numérique en 2025 ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Depuis le 28 juin 2025, les entreprises privées (e-commerce, services en ligne essentiels) et publiques doivent respecter le RGAA (Référentiel Général d’Amélioration de l’Accessibilité). Le non-respect expose à des sanctions administratives de la DGCCRF ou de l’ARCOM, pouvant atteindre <strong>50 000 €</strong> par service non conforme.
+                        </p>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">2. Quelles sanctions en cas de non-conformité ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Les amendes vont de 7 500 € à 50 000 € selon la gravité et le secteur, cumulables avec astreintes journalières. Les obligations déclaratives (déclaration d’accessibilité, schéma pluriannuel) sont particulièrement surveillées.
+                        </p>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">3. Les outils automatisés suffisent-ils pour être conforme RGAA ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Non. Les outils automatisés détectent seulement 30 à 50 % des critères. Une analyse manuelle experte est indispensable pour atteindre une conformité réelle et durable.
+                        </p>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">4. Combien de temps dure un audit AIGYROS ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Le Diagnostic Flash Gratuit (3 pages clés) est remis sous 48h.<br>
+                            Un Audit Standard ou Premium complet prend 4 à 8 semaines selon la complexité du site ou de l’application.
+                        </p>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">5. Quel taux de conformité obtenez-vous après remédiation ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Notre méthodologie garantit 98 % de conformité après accompagnement, sur les 4 piliers RGAA : Perceptible, Utilisable, Compréhensible, Robuste.
+                        </p>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">6. Travaillez-vous avec mon agence web actuelle ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Oui ! Nous proposons des partenariats aux agences : montée en compétence de leurs équipes, support technique et certification de leurs livrables.
+                        </p>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">7. L’audit est-il un certificat officiel ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            En France, il n’existe pas de certification officielle RGAA par un organisme tiers. En revanche, nos audits suivent le référentiel officiel ARA et délivrent une attestation de conformité détaillée, reconnue par la DGCCRF en cas de contrôle.
+                        </p>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors">8. Comment démarrer avec AIGYROS ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Demandez votre Diagnostic Flash Gratuit (valeur 490 € offerte) directement sur ce site via Calendly. Nous analysons 3 pages clés et vous recevez un rapport détaillé sous 48h.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-brand-blue/10 border border-brand-blue/20 p-10 rounded-3xl text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-wider">Vous avez une autre question ?</h3>
+                    <p class="text-slate-400 mb-8">Contactez-nous – nous répondons sous 24h.</p>
+                    <a href="mailto:contact@aigyros.com" class="text-brand-blue font-black text-xl hover:text-white transition">contact@aigyros.com</a>
+                </div>
+                
+                <p class="mt-20 pt-10 border-t border-slate-800 text-xs text-slate-500 uppercase tracking-widest font-bold text-center lg:text-left">
+                    Date de dernière mise à jour : 21 décembre 2025
+                </p>
+            </div>
+        </div>
+
+    </main>
 
     <!-- Footer -->
     <footer id="contact" class="py-24 bg-brand-dark border-t border-slate-900">
@@ -270,7 +549,6 @@
             <div class="grid md:grid-cols-2 gap-20 items-center">
                 <div class="space-y-8">
                     <div class="flex items-center">
-                        <!-- Carré 'A' retiré -->
                         <span class="text-xl font-bold tracking-tight text-white uppercase italic tracking-tighter">Aigyros</span>
                     </div>
                     <div class="space-y-4">
@@ -303,14 +581,22 @@
             
             <div class="mt-24 pt-10 border-t border-slate-900 text-[10px] text-slate-600 uppercase tracking-[0.2em] flex flex-col md:flex-row justify-between gap-4">
                 <p>AIGYROS Cabinet d'Expertise — Résilience & Accessibilité © 2025</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition">Mentions Légales</a>
-                    <a href="#" class="hover:text-white transition">RGPD</a>
-                    <a href="#" class="hover:text-white transition">Plan du site</a>
+                <div class="flex flex-wrap gap-x-6 gap-y-2">
+                    <a href="#" onclick="showPage('home')" class="hover:text-white transition">Expertise</a>
+                    <a href="#" onclick="showPage('home')" class="hover:text-white transition">Solutions</a>
+                    <a href="#faq" onclick="showPage('faq')" class="hover:text-white transition">FAQ</a>
+                    <a href="#mentions-legales" onclick="showPage('legal')" class="hover:text-white transition">Mentions Légales</a>
+                    <a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#plan-du-site" onclick="showPage('sitemap')" class="hover:text-white transition">Plan du site</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 z-[100] w-12 h-12 bg-slate-800/80 hover:bg-brand-blue text-white rounded-xl shadow-2xl backdrop-blur-md border border-slate-700 flex items-center justify-center opacity-0 pointer-events-none hover:scale-110 active:scale-95 transition-all">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Lead Modal -->
     <div id="modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden p-6">
@@ -328,6 +614,11 @@
                     <button type="submit" id="diag-submit-btn" class="w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-4 rounded-xl transition btn-green-glow uppercase tracking-widest text-xs">
                         Obtenir mon score maintenant
                     </button>
+                    <!-- Mention de confidentialité ajoutée ici -->
+                    <p class="text-[10px] text-slate-500 mt-4 text-center leading-tight">
+                        En soumettant ce formulaire, vous acceptez notre 
+                        <a href="#politique-de-confidentialite" onclick="closeModal(); showPage('privacy')" class="text-brand-blue hover:underline">Politique de confidentialité</a>.
+                    </p>
                 </form>
             </div>
 
@@ -346,6 +637,72 @@
     </div>
 
     <script>
+        // BACK TO TOP VISIBILITY
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            if (window.scrollY > 400) {
+                btn.classList.remove('opacity-0', 'pointer-events-none');
+                btn.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                btn.classList.add('opacity-0', 'pointer-events-none');
+                btn.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        // SPA NAVIGATION LOGIC
+        function showPage(pageId) {
+            window.scrollTo(0, 0);
+            
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            if (pageId === 'home') {
+                document.getElementById('home-page').classList.add('active');
+                window.location.hash = "";
+            } else if (pageId === 'legal') {
+                document.getElementById('legal-page').classList.add('active');
+                window.location.hash = "mentions-legales";
+            } else if (pageId === 'sitemap') {
+                document.getElementById('sitemap-page').classList.add('active');
+                window.location.hash = "plan-du-site";
+            } else if (pageId === 'faq') {
+                document.getElementById('faq-page').classList.add('active');
+                window.location.hash = "faq";
+            } else if (pageId === 'privacy') {
+                document.getElementById('privacy-page').classList.add('active');
+                window.location.hash = "politique-de-confidentialite";
+            }
+        }
+
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash === '#mentions-legales') {
+                showPage('legal');
+            } else if (hash === '#plan-du-site') {
+                showPage('sitemap');
+            } else if (hash === '#faq') {
+                showPage('faq');
+            } else if (hash === '#politique-de-confidentialite') {
+                showPage('privacy');
+            }
+        });
+
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash;
+            if (hash === '#mentions-legales') {
+                showPage('legal');
+            } else if (hash === '#plan-du-site') {
+                showPage('sitemap');
+            } else if (hash === '#faq') {
+                showPage('faq');
+            } else if (hash === '#politique-de-confidentialite') {
+                showPage('privacy');
+            } else if (hash === "" || hash === "#") {
+                showPage('home');
+            }
+        });
+
         function openModal() {
             document.getElementById('modal').classList.remove('hidden');
             document.getElementById('diag-form-container').classList.remove('hidden');
@@ -373,7 +730,6 @@
             const resendApiKey = 're_74Yc7X9y_NCH5xMjBfpFNyMNtKkYMv4X6';
 
             try {
-                // Internal notification
                 const notifyResponse = await fetch('https://api.resend.com/emails', {
                     method: 'POST',
                     headers: {
@@ -388,7 +744,6 @@
                     })
                 });
 
-                // Customer confirmation
                 const confirmResponse = await fetch('https://api.resend.com/emails', {
                     method: 'POST',
                     headers: {
@@ -421,7 +776,6 @@
             }
         });
 
-        // Entrance animations observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
