@@ -74,6 +74,7 @@
             <div class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
                 <a href="#expertise" onclick="showPage('home')" class="hover:text-brand-blue transition">Expertise</a>
                 <a href="#methodes" onclick="showPage('home')" class="hover:text-brand-blue transition">Méthodes</a>
+                <a href="#process" onclick="showPage('home')" class="hover:text-brand-blue transition">Process</a>
                 <a href="#solutions" onclick="showPage('home')" class="hover:text-brand-blue transition">Solutions</a>
                 <a href="#faq" onclick="showPage('faq')" class="hover:text-brand-blue transition">FAQ</a>
             </div>
@@ -201,8 +202,8 @@
             <section id="solutions" class="py-24 bg-brand-dark">
                 <div class="container mx-auto px-6 text-center">
                     <div class="mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Votre Parcours vers l'Élite Numérique</h2>
-                        <p class="text-slate-400 max-w-2xl mx-auto">Des solutions dimensionnées pour sécuriser votre impact et votre conformité.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter text-gradient">Votre Parcours vers l'Élite Numérique</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto font-light">Des solutions dimensionnées pour sécuriser votre impact et votre conformité.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -216,7 +217,7 @@
                                 <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Rapport de 3 pages</li>
                                 <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-brand-blue mr-3"></i> Identification failles majeures</li>
                             </ul>
-                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest group-hover:scale-105 shadow-lg shadow-brand-green/20">Commander</a>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest group-hover:scale-105 shadow-lg shadow-brand-green/20">Commander</a>
                         </div>
 
                         <!-- Standard (Recommended) -->
@@ -259,18 +260,82 @@
                                 <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Alertes correctives</li>
                                 <li class="flex items-center text-slate-400"><i class="fa-solid fa-check text-slate-500 mr-3"></i> Veille légale incluse</li>
                             </ul>
-                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto shadow-lg shadow-slate-700/20">Souscrire</a>
+                            <a href="https://calendly.com/aigyros/30min" target="_blank" class="w-full bg-slate-800 group-hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition uppercase text-xs tracking-widest mt-auto shadow-lg shadow-slate-700/20 text-center">Souscrire</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FAQ Summary / Call to Action -->
+            <!-- NOUEVALLE SECTION: NOTRE PROCESS -->
+            <section id="process" class="py-24 bg-slate-950 overflow-hidden">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-20">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-widest text-gradient">Notre Process d'Accompagnement</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto font-light">Une méthodologie rigoureuse pour une conformité sans compromis.</p>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Connecting Line (Desktop) -->
+                        <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue -translate-y-1/2 opacity-20"></div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+                            <!-- Step 1 -->
+                            <div class="text-center group">
+                                <div class="w-20 h-20 bg-slate-900 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-slate-800 group-hover:border-brand-blue transition-all transform group-hover:-translate-y-2 relative shadow-2xl">
+                                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center font-bold text-sm text-white">1</div>
+                                    <i class="fa-solid fa-bolt-lightning text-brand-blue text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 uppercase tracking-wide">Diagnostic Flash (48h)</h3>
+                                <p class="text-slate-400 text-sm font-light leading-relaxed">Analyse rapide de 3 pages critiques de votre écosystème et remise du rapport initial.</p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="text-center group">
+                                <div class="w-20 h-20 bg-slate-900 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-slate-800 group-hover:border-brand-green transition-all transform group-hover:-translate-y-2 relative shadow-2xl">
+                                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-green rounded-full flex items-center justify-center font-bold text-sm text-white">2</div>
+                                    <i class="fa-solid fa-magnifying-glass-chart text-brand-green text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 uppercase tracking-wide">Audit Complet</h3>
+                                <p class="text-slate-400 text-sm font-light leading-relaxed">Analyse approfondie de tous les critères RGAA/WCAG et livraison du plan de remédiation technique.</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="text-center group">
+                                <div class="w-20 h-20 bg-slate-900 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-slate-800 group-hover:border-brand-blue transition-all transform group-hover:-translate-y-2 relative shadow-2xl">
+                                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center font-bold text-sm text-white">3</div>
+                                    <i class="fa-solid fa-screwdriver-wrench text-brand-blue text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 uppercase tracking-wide">Remédiation</h3>
+                                <p class="text-slate-400 text-sm font-light leading-relaxed">Support technique continu pour atteindre 98% de conformité et remise de l'attestation finale.</p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="text-center group">
+                                <div class="w-20 h-20 bg-slate-900 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-slate-800 group-hover:border-brand-green transition-all transform group-hover:-translate-y-2 relative shadow-2xl">
+                                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-green rounded-full flex items-center justify-center font-bold text-sm text-white">4</div>
+                                    <i class="fa-solid fa-shield-halved text-brand-green text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 uppercase tracking-wide">Monitoring Sérénité</h3>
+                                <p class="text-slate-400 text-sm font-light leading-relaxed">Veille légale mensuelle et maintenance technique pour garantir votre conformité dans le temps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-20 text-center">
+                        <a href="https://calendly.com/aigyros/30min" target="_blank" class="inline-flex items-center space-x-3 bg-slate-900 border border-slate-800 hover:border-brand-blue text-white px-8 py-4 rounded-xl font-bold transition group">
+                            <span>Démarrer mon accompagnement</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Summary -->
             <section class="py-24 bg-slate-950">
-                <div class="container mx-auto px-6 text-center">
-                    <h2 class="text-3xl font-bold text-white mb-8 uppercase tracking-widest">Une question ?</h2>
-                    <p class="text-slate-400 mb-10 max-w-2xl mx-auto font-light text-lg">Consultez notre foire aux questions complète ou contactez un expert pour une réponse personnalisée sous 24h.</p>
-                    <button onclick="showPage('faq')" class="bg-brand-blue hover:bg-cyan-500 text-white px-8 py-4 rounded-xl font-bold transition uppercase tracking-widest text-sm shadow-lg shadow-brand-blue/20">Voir la FAQ complète</button>
+                <div class="container mx-auto px-6 text-center text-left text-left">
+                    <h2 class="text-3xl font-bold text-white mb-8 uppercase tracking-widest text-left text-center">Une question ?</h2>
+                    <p class="text-slate-400 mb-10 max-w-2xl mx-auto font-light text-lg text-left text-center">Consultez notre foire aux questions complète ou contactez un expert pour une réponse personnalisée sous 24h.</p>
+                    <button onclick="showPage('faq')" class="bg-brand-blue hover:bg-cyan-500 text-white px-8 py-4 rounded-xl font-bold transition uppercase tracking-widest text-sm shadow-lg shadow-brand-blue/20 text-left text-center">Voir la FAQ complète</button>
                 </div>
             </section>
         </div>
@@ -284,7 +349,7 @@
                         <span>Retour à l'accueil</span>
                     </button>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter text-gradient">Mentions légales</h1>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">Mentions légales</h1>
                 <div class="space-y-12 text-slate-300 font-light leading-relaxed text-left">
                     <section>
                         <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2 text-left">Éditeur du site</h2>
@@ -314,24 +379,24 @@
         <!-- PRIVACY POLICY PAGE VIEW -->
         <div id="privacy-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen text-left">
             <div class="container mx-auto px-6 max-w-4xl text-left">
-                <div class="mb-12 text-left">
-                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left">
-                        <i class="fa-solid fa-arrow-left"></i>
+                <div class="mb-12 text-left text-left text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left text-left">
+                        <i class="fa-solid fa-arrow-left text-left"></i>
                         <span>Retour à l'accueil</span>
                     </button>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient text-left text-left">Politique de confidentialité</h1>
-                <div class="space-y-12 text-slate-300 font-light leading-relaxed text-left text-left">
-                    <p class="text-lg text-left">AIGYROS respecte votre vie privée et s’engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient text-left text-left text-left">Politique de confidentialité</h1>
+                <div class="space-y-12 text-slate-300 font-light leading-relaxed text-left text-left text-left">
+                    <p class="text-lg text-left text-left">AIGYROS respecte votre vie privée et s’engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
                     <section>
-                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2 text-left">Données collectées</h2>
-                        <p class="text-left">Via le formulaire "Diagnostic Flash" : prénom, nom, email professionnel, URL du site. Ces données sont collectées avec votre consentement explicite pour traiter votre demande de diagnostic RGAA.</p>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2 text-left text-left">Données collectées</h2>
+                        <p class="text-left text-left">Via le formulaire "Diagnostic Flash" : prénom, nom, email professionnel, URL du site. Ces données sont collectées avec votre consentement explicite pour traiter votre demande de diagnostic RGAA.</p>
                     </section>
                     <section>
-                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2 text-left">Vos droits</h2>
-                        <p class="text-left">Pour les exercer : <a href="mailto:contact@aigyros.com" class="text-brand-blue hover:underline text-left">contact@aigyros.com</a>. Réclamation possible auprès de la CNIL.</p>
+                        <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider border-b border-slate-800 pb-2 text-left text-left text-left">Vos droits</h2>
+                        <p class="text-left text-left text-left">Pour les exercer : <a href="mailto:contact@aigyros.com" class="text-brand-blue hover:underline text-left text-left text-left">contact@aigyros.com</a>. Réclamation possible auprès de la CNIL.</p>
                     </section>
-                    <p class="pt-8 text-xs text-slate-500 uppercase tracking-widest font-bold border-t border-slate-800 text-left">Dernière mise à jour : 21 décembre 2025</p>
+                    <p class="pt-8 text-xs text-slate-500 uppercase tracking-widest font-bold border-t border-slate-800 text-left text-left">Dernière mise à jour : 21 décembre 2025</p>
                 </div>
             </div>
         </div>
@@ -339,33 +404,34 @@
         <!-- PLAN DU SITE PAGE VIEW -->
         <div id="sitemap-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen text-left">
             <div class="container mx-auto px-6 max-w-4xl text-left">
-                <div class="mb-12 text-left">
-                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left text-left">
-                        <i class="fa-solid fa-arrow-left"></i>
+                <div class="mb-12 text-left text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left text-left text-left">
+                        <i class="fa-solid fa-arrow-left text-left text-left"></i>
                         <span>Retour à l'accueil</span>
                     </button>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient text-left">Plan du site</h1>
-                <div class="grid md:grid-cols-2 gap-12 text-slate-300 text-left">
-                    <div class="space-y-8 text-left">
-                        <div class="text-left">
-                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center text-left"><i class="fa-solid fa-house text-brand-blue mr-3 text-sm text-left"></i> Navigation</h2>
-                            <ul class="space-y-2 ml-7 text-left">
-                                <li><a href="#" onclick="showPage('home')" class="sitemap-link text-left">Accueil</a></li>
-                                <li><a href="#expertise" onclick="showPage('home')" class="sitemap-link text-left">Expertise</a></li>
-                                <li><a href="#methodes" onclick="showPage('home')" class="sitemap-link text-left">Méthodes</a></li>
-                                <li><a href="#solutions" onclick="showPage('home')" class="sitemap-link text-left">Solutions</a></li>
-                                <li><a href="#faq" onclick="showPage('faq')" class="sitemap-link text-left">FAQ</a></li>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter text-gradient text-left text-left text-left">Plan du site</h1>
+                <div class="grid md:grid-cols-2 gap-12 text-slate-300 text-left text-left text-left">
+                    <div class="space-y-8 text-left text-left text-left">
+                        <div class="text-left text-left text-left">
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center text-left text-left text-left"><i class="fa-solid fa-house text-brand-blue mr-3 text-sm text-left text-left"></i> Navigation</h2>
+                            <ul class="space-y-2 ml-7 text-left text-left text-left">
+                                <li><a href="#" onclick="showPage('home')" class="sitemap-link text-left text-left">Accueil</a></li>
+                                <li><a href="#expertise" onclick="showPage('home')" class="sitemap-link text-left text-left text-left">Expertise</a></li>
+                                <li><a href="#methodes" onclick="showPage('home')" class="sitemap-link text-left text-left text-left text-left">Méthodes</a></li>
+                                <li><a href="#process" onclick="showPage('home')" class="sitemap-link text-left text-left text-left text-left text-left text-left">Notre Process</a></li>
+                                <li><a href="#solutions" onclick="showPage('home')" class="sitemap-link text-left text-left text-left text-left text-left text-left text-left">Solutions</a></li>
+                                <li><a href="#faq" onclick="showPage('faq')" class="sitemap-link text-left text-left text-left text-left text-left">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="space-y-8 text-left">
-                        <div class="text-left">
-                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center text-left"><i class="fa-solid fa-scale-balanced text-brand-blue mr-3 text-sm text-left"></i> Légal</h2>
-                            <ul class="space-y-2 ml-7 text-left">
-                                <li><a href="#mentions-legales" onclick="showPage('legal')" class="sitemap-link text-left text-left">Mentions légales</a></li>
-                                <li><a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="sitemap-link text-left text-left">Politique de confidentialité</a></li>
-                                <li><a href="#plan-du-site" onclick="showPage('sitemap')" class="sitemap-link font-bold text-brand-blue text-lg text-left text-left">Plan du site</a></li>
+                    <div class="space-y-8 text-left text-left text-left text-left">
+                        <div class="text-left text-left text-left text-left">
+                            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center text-left text-left text-left text-left"><i class="fa-solid fa-scale-balanced text-brand-blue mr-3 text-sm text-left text-left text-left"></i> Légal</h2>
+                            <ul class="space-y-2 ml-7 text-left text-left text-left text-left text-left">
+                                <li><a href="#mentions-legales" onclick="showPage('legal')" class="sitemap-link text-left text-left text-left text-left text-left text-left">Mentions légales</a></li>
+                                <li><a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="sitemap-link text-left text-left text-left text-left text-left text-left text-left">Politique de confidentialité</a></li>
+                                <li><a href="#plan-du-site" onclick="showPage('sitemap')" class="sitemap-link font-bold text-brand-blue text-lg text-left text-left text-left text-left text-left text-left">Plan du site</a></li>
                             </ul>
                         </div>
                     </div>
@@ -375,26 +441,26 @@
 
         <!-- FAQ PAGE VIEW -->
         <div id="faq-page" class="page-view py-32 md:py-48 bg-brand-dark min-h-screen text-left">
-            <div class="container mx-auto px-6 max-w-4xl text-left text-left text-left">
-                <div class="mb-12 text-left">
-                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left">
-                        <i class="fa-solid fa-arrow-left"></i>
+            <div class="container mx-auto px-6 max-w-4xl text-left text-left text-left text-left text-left text-left">
+                <div class="mb-12 text-left text-left text-left text-left">
+                    <button onclick="showPage('home')" class="text-brand-blue hover:text-white transition inline-flex items-center space-x-2 text-sm uppercase tracking-widest font-bold text-left text-left text-left text-left">
+                        <i class="fa-solid fa-arrow-left text-left text-left text-left"></i>
                         <span>Retour à l'accueil</span>
                     </button>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-16 uppercase tracking-tighter text-gradient text-center lg:text-left text-left">FAQ – Questions fréquentes</h1>
-                <div class="space-y-6 text-left">
-                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left">
-                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left">1. Quelles sont les obligations d’accessibilité numérique en 2025 ?</h2>
-                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left">Depuis le 28 juin 2025, les entreprises privées et publiques doivent respecter le RGAA. Le non-respect expose à des sanctions administratives pouvant atteindre 50 000 €.</p>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-16 uppercase tracking-tighter text-gradient text-center lg:text-left text-left text-left text-left text-left">FAQ – Questions fréquentes</h1>
+                <div class="space-y-6 text-left text-left text-left text-left">
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left text-left text-left text-left">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left text-left text-left text-left text-left">1. Quelles sont les obligations d’accessibilité numérique en 2025 ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left text-left text-left text-left text-left">Depuis le 28 juin 2025, les entreprises privées et publiques doivent respecter le RGAA. Le non-respect expose à des sanctions administratives pouvant atteindre 50 000 €.</p>
                     </div>
-                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left">
-                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left text-left">2. Quelles sanctions en cas de non-conformité ?</h2>
-                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left">Les amendes vont de 7 500 € à 50 000 € selon la gravité et le secteur.</p>
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left text-left text-left text-left">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left text-left text-left text-left text-left text-left">2. Quelles sanctions en cas de non-conformité ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left text-left text-left text-left text-left text-left">Les amendes vont de 7 500 € à 50 000 € selon la gravité et le secteur.</p>
                     </div>
-                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left">
-                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left text-left">3. Les outils automatisés suffisent-ils ?</h2>
-                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left">Non. Ils ne détectent que 30 à 50 % des critères. Une analyse manuelle experte est indispensable.</p>
+                    <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-brand-blue transition-colors group text-left text-left text-left text-left text-left">
+                        <h2 class="text-xl font-bold text-white mb-4 group-hover:text-brand-blue transition-colors text-left text-left text-left text-left text-left text-left text-left text-left">3. Les outils automatisés suffisent-ils ?</h2>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm text-left text-left text-left text-left text-left text-left text-left text-left">Non. Ils ne détectent que 30 à 50 % des critères. Une analyse manuelle experte est indispensable.</p>
                     </div>
                 </div>
             </div>
@@ -403,64 +469,67 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="py-24 bg-brand-dark border-t border-slate-900 text-left">
-        <div class="container mx-auto px-6 text-left">
-            <div class="grid md:grid-cols-2 gap-20 items-center text-left">
-                <div class="space-y-8 text-center md:text-left text-left">
-                    <div class="flex justify-center md:justify-start text-left">
-                        <span class="text-xl font-bold tracking-tight text-white uppercase italic tracking-tighter text-left">Aigyros</span>
+    <footer id="contact" class="py-24 bg-brand-dark border-t border-slate-900 text-left text-left text-left">
+        <div class="container mx-auto px-6 text-left text-left text-left">
+            <div class="grid md:grid-cols-2 gap-20 items-center text-left text-left text-left">
+                <div class="space-y-8 text-center md:text-left text-left text-left text-left">
+                    <div class="flex justify-center md:justify-start text-left text-left text-left text-left text-left">
+                        <span class="text-xl font-bold tracking-tight text-white uppercase italic tracking-tighter text-left text-left text-left text-left">Aigyros</span>
                     </div>
-                    <p class="text-slate-400 max-w-sm font-light leading-relaxed mx-auto md:mx-0 text-left">Ouvrez le dialogue avec nos experts pour sécuriser votre entreprise et booster votre accessibilité.</p>
-                    <div class="flex flex-col space-y-3 text-slate-300 text-left">
-                        <p class="flex items-center justify-center md:justify-start text-left">
-                            <i class="fa-solid fa-envelope text-brand-blue mr-3 text-left"></i> 
-                            <a href="mailto:contact@aigyros.com" class="hover:text-brand-blue transition underline decoration-brand-blue/30 underline-offset-4 font-bold tracking-wide text-left">contact@aigyros.com</a>
+                    <p class="text-slate-400 max-w-sm font-light leading-relaxed mx-auto md:mx-0 text-left text-left text-left text-left text-left">Ouvrez le dialogue avec nos experts pour sécuriser votre entreprise et booster votre accessibilité.</p>
+                    <div class="flex flex-col space-y-3 text-slate-300 text-left text-left text-left text-left text-left">
+                        <p class="flex items-center justify-center md:justify-start text-left text-left text-left text-left text-left text-left">
+                            <i class="fa-solid fa-envelope text-brand-blue mr-3 text-left text-left text-left text-left text-left text-left"></i> 
+                            <a href="mailto:contact@aigyros.com" class="hover:text-brand-blue transition underline decoration-brand-blue/30 underline-offset-4 font-bold tracking-wide text-left text-left text-left text-left text-left text-left">contact@aigyros.com</a>
                         </p>
                     </div>
                 </div>
-                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 shadow-2xl text-center text-left">
-                    <h3 class="text-xl font-bold text-white mb-8 uppercase tracking-widest text-center">Ouvrir le dialogue</h3>
-                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="inline-block w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-5 rounded-xl transition btn-green-glow uppercase tracking-widest text-xs shadow-lg shadow-brand-green/20 transform hover:-translate-y-1 text-center text-left">Prendre un rendez-vous sur Calendly</a>
+                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 shadow-2xl text-center text-left text-left text-left text-left text-left">
+                    <h3 class="text-xl font-bold text-white mb-8 uppercase tracking-widest text-center text-left text-left text-left text-left text-left">Ouvrir le dialogue</h3>
+                    <a href="https://calendly.com/aigyros/30min" target="_blank" class="inline-block w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-5 rounded-xl transition btn-green-glow uppercase tracking-widest text-xs shadow-lg shadow-brand-green/20 transform hover:-translate-y-1 text-center text-left text-left text-left text-left text-left">Prendre un rendez-vous sur Calendly</a>
                 </div>
             </div>
-            <div class="mt-24 pt-10 border-t border-slate-900 text-[10px] text-slate-600 uppercase tracking-[0.2em] flex flex-col md:flex-row justify-between gap-4 text-center md:text-left text-left">
-                <p class="text-left">AIGYROS © 2025</p>
-                <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-left">
-                    <a href="#faq" onclick="showPage('faq')" class="hover:text-white transition text-left">FAQ</a>
-                    <a href="#mentions-legales" onclick="showPage('legal')" class="hover:text-white transition text-left">Mentions Légales</a>
-                    <a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="hover:text-white transition text-left">Confidentialité</a>
-                    <a href="#plan-du-site" onclick="showPage('sitemap')" class="hover:text-white transition text-left">Plan du site</a>
+            <div class="mt-24 pt-10 border-t border-slate-900 text-[10px] text-slate-600 uppercase tracking-[0.2em] flex flex-col md:flex-row justify-between gap-4 text-center md:text-left text-left text-left text-left text-left text-left">
+                <p class="text-left text-left text-left text-left text-left text-left text-left text-left">AIGYROS © 2025</p>
+                <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-left text-left text-left text-left text-left text-left text-left">
+                    <a href="#expertise" onclick="showPage('home')" class="hover:text-white transition text-left text-left text-left">Expertise</a>
+                    <a href="#process" onclick="showPage('home')" class="hover:text-white transition text-left text-left text-left">Process</a>
+                    <a href="#solutions" onclick="showPage('home')" class="hover:text-white transition text-left text-left text-left">Solutions</a>
+                    <a href="#faq" onclick="showPage('faq')" class="hover:text-white transition text-left text-left text-left text-left">FAQ</a>
+                    <a href="#mentions-legales" onclick="showPage('legal')" class="hover:text-white transition text-left text-left text-left text-left">Mentions Légales</a>
+                    <a href="#politique-de-confidentialite" onclick="showPage('privacy')" class="hover:text-white transition text-left text-left text-left text-left">Confidentialité</a>
+                    <a href="#plan-du-site" onclick="showPage('sitemap')" class="hover:text-white transition text-left text-left text-left text-left">Plan du site</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 z-[100] w-12 h-12 bg-slate-800/80 hover:bg-brand-blue text-white rounded-xl shadow-2xl backdrop-blur-md border border-slate-700 flex items-center justify-center opacity-0 pointer-events-none hover:scale-110 transition-all shadow-blue-900/20 text-left">
-        <i class="fa-solid fa-arrow-up text-left"></i>
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 z-[100] w-12 h-12 bg-slate-800/80 hover:bg-brand-blue text-white rounded-xl shadow-2xl backdrop-blur-md border border-slate-700 flex items-center justify-center opacity-0 pointer-events-none hover:scale-110 transition-all shadow-blue-900/20 text-left text-left text-left">
+        <i class="fa-solid fa-arrow-up text-left text-left text-left text-left"></i>
     </button>
 
     <!-- Lead Modal -->
-    <div id="modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden p-6 text-left">
-        <div class="absolute inset-0 bg-slate-950/95 backdrop-blur-md text-left" onclick="closeModal()"></div>
-        <div class="bg-slate-900 border border-slate-800 p-10 rounded-3xl w-full max-w-lg relative z-10 shadow-2xl shadow-cyan-900/10 text-left text-left">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white transition text-2xl text-left text-left">✕</button>
-            <div id="diag-form-container" class="text-left text-left">
-                <h3 class="text-2xl font-bold text-white mb-2 uppercase tracking-tight text-left text-left text-left">Diagnostic Flash</h3>
-                <p class="text-slate-400 mb-8 font-light italic text-sm text-center text-left text-left">Analyse approfondie de 3 pages clés RGAA/WCAG (490 € HT).</p>
-                <form id="diagnostic-form" class="space-y-4 text-left">
-                    <input type="text" id="diag-name" placeholder="Prénom Nom" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left">
-                    <input type="email" id="diag-email" placeholder="Email Pro" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left">
-                    <input type="url" id="diag-url" placeholder="URL du site" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left text-left">
-                    <button type="submit" id="diag-submit-btn" class="w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-4 rounded-xl transition btn-green-glow uppercase tracking-widest text-xs text-center text-left">Commander mon Diagnostic (490 €)</button>
-                    <p class="text-[10px] text-slate-500 mt-4 text-center leading-tight text-left">En soumettant ce formulaire, vous acceptez notre <a href="#politique-de-confidentialite" onclick="closeModal(); showPage('privacy')" class="text-brand-blue hover:underline transition text-left text-left">Politique de confidentialité</a>.</p>
+    <div id="modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden p-6 text-left text-left text-left text-left">
+        <div class="absolute inset-0 bg-slate-950/95 backdrop-blur-md text-left text-left text-left text-left" onclick="closeModal()"></div>
+        <div class="bg-slate-900 border border-slate-800 p-10 rounded-3xl w-full max-w-lg relative z-10 shadow-2xl shadow-cyan-900/10 text-left text-left text-left text-left text-left text-left">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white transition text-2xl text-left text-left text-left text-left text-left text-left">✕</button>
+            <div id="diag-form-container" class="text-left text-left text-left text-left text-left text-left text-left">
+                <h3 class="text-2xl font-bold text-white mb-2 uppercase tracking-tight text-left text-left text-left text-left text-left text-left text-left text-left">Diagnostic Flash</h3>
+                <p class="text-slate-400 mb-8 font-light italic text-sm text-center text-left text-left text-left text-left text-left text-left text-left">Analyse approfondie de 3 pages clés RGAA/WCAG (490 € HT).</p>
+                <form id="diagnostic-form" class="space-y-4 text-left text-left text-left text-left text-left">
+                    <input type="text" id="diag-name" placeholder="Prénom Nom" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left text-left text-left text-left">
+                    <input type="email" id="diag-email" placeholder="Email Pro" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left text-left text-left text-left text-left">
+                    <input type="url" id="diag-url" placeholder="URL du site" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green text-left text-left text-left text-left text-left text-left text-left">
+                    <button type="submit" id="diag-submit-btn" class="w-full bg-brand-green hover:bg-brand-emerald text-white font-bold py-4 rounded-xl transition btn-green-glow uppercase tracking-widest text-xs text-center text-left text-left text-left text-left">Commander mon Diagnostic (490 €)</button>
+                    <p class="text-[10px] text-slate-500 mt-4 text-center leading-tight text-left text-left text-left text-left text-left">En soumettant ce formulaire, vous acceptez notre <a href="#politique-de-confidentialite" onclick="closeModal(); showPage('privacy')" class="text-brand-blue hover:underline transition text-left text-left text-left text-left text-left text-left text-left">Politique de confidentialité</a>.</p>
                 </form>
             </div>
-            <div id="diag-success-container" class="hidden text-center py-8 text-left">
-                <i class="fa-solid fa-check text-brand-green text-4xl mb-4 text-left text-left text-left"></i>
-                <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-tight text-left text-left text-left">Merci <span id="success-first-name"></span> !</h3>
-                <p class="text-slate-300 font-light leading-relaxed text-left text-left text-left">Votre demande de Diagnostic Flash a été enregistrée.<br>Un expert revient vers vous sous <strong>48h</strong> pour finaliser la commande.</p>
-                <button onclick="closeModal()" class="mt-8 text-slate-500 uppercase text-xs font-black tracking-widest transition hover:text-white text-left text-left">Fermer</button>
+            <div id="diag-success-container" class="hidden text-center py-8 text-left text-left text-left text-left text-left">
+                <i class="fa-solid fa-check text-brand-green text-4xl mb-4 text-left text-left text-left text-left text-left text-left text-left text-left"></i>
+                <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-tight text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">Merci <span id="success-first-name"></span> !</h3>
+                <p class="text-slate-300 font-light leading-relaxed text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">Votre demande de Diagnostic Flash a été enregistrée.<br>Un expert revient vers vous sous <strong>48h</strong> pour finaliser la commande.</p>
+                <button onclick="closeModal()" class="mt-8 text-slate-500 uppercase text-xs font-black tracking-widest transition hover:text-white text-left text-left text-left text-left text-left text-left text-left text-left">Fermer</button>
             </div>
         </div>
     </div>
@@ -481,10 +550,29 @@
         // SPA NAVIGATION LOGIC
         function showPage(pageId) {
             window.scrollTo({top: 0, behavior: 'smooth'});
-            document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active'));
-            const map = { home: 'home-page', legal: 'legal-page', privacy: 'privacy-page', sitemap: 'sitemap-page', faq: 'faq-page' };
-            if (document.getElementById(map[pageId])) document.getElementById(map[pageId]).classList.add('active');
-            const hash = pageId === 'home' ? '' : pageId === 'legal' ? 'mentions-legales' : pageId === 'privacy' ? 'politique-de-confidentialite' : pageId === 'sitemap' ? 'plan-du-site' : 'faq';
+            
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            const map = { 
+                home: 'home-page', 
+                legal: 'legal-page', 
+                privacy: 'privacy-page', 
+                sitemap: 'sitemap-page', 
+                faq: 'faq-page' 
+            };
+            
+            if (document.getElementById(map[pageId])) {
+                document.getElementById(map[pageId]).classList.add('active');
+            }
+            
+            const hash = pageId === 'home' ? '' : 
+                         pageId === 'legal' ? 'mentions-legales' : 
+                         pageId === 'privacy' ? 'politique-de-confidentialite' : 
+                         pageId === 'sitemap' ? 'plan-du-site' : 
+                         'faq';
+            
             if (hash) window.location.hash = hash;
             else history.pushState("", document.title, window.location.pathname + window.location.search);
         }
@@ -497,6 +585,15 @@
             else if (h === '#politique-de-confidentialite') showPage('privacy');
         });
 
+        window.addEventListener('hashchange', () => {
+            const h = window.location.hash;
+            if (h === '#mentions-legales') showPage('legal');
+            else if (h === '#plan-du-site') showPage('sitemap');
+            else if (h === '#faq') showPage('faq');
+            else if (h === '#politique-de-confidentialite') showPage('privacy');
+            else if (h === "" || h === "#") showPage('home');
+        });
+
         function openModal() { document.getElementById('modal').classList.remove('hidden'); }
         function closeModal() { document.getElementById('modal').classList.add('hidden'); }
 
@@ -505,9 +602,14 @@
             e.preventDefault();
             const btn = document.getElementById('diag-submit-btn');
             btn.disabled = true; btn.innerText = "Traitement...";
+            
             const fullName = document.getElementById('diag-name').value;
             const firstName = fullName.split(' ')[0];
+            const email = document.getElementById('diag-email').value;
+            const url = document.getElementById('diag-url').value;
+            
             const resendApiKey = 're_74Yc7X9y_NCH5xMjBfpFNyMNtKkYMv4X6';
+
             try {
                 const response = await fetch('https://api.resend.com/emails', {
                     method: 'POST',
@@ -516,21 +618,37 @@
                         from: 'leads@aigyros.com',
                         to: 'contact@aigyros.com',
                         subject: 'Commande Diagnostic Flash - AIGYROS',
-                        html: `<div style="font-family: sans-serif; color: #333;"><h2>Nouveau Lead Diagnostic Flash (490 € HT)</h2><p><strong>Nom :</strong> ${fullName}</p><p><strong>Email :</strong> ${document.getElementById('diag-email').value}</p><p><strong>URL :</strong> ${document.getElementById('diag-url').value}</p></div>`
+                        html: `
+                            <div style="font-family: sans-serif; color: #333;">
+                                <h2>Nouveau Lead</h2>
+                                <p><strong>Nom :</strong> ${fullName}</p>
+                                <p><strong>Email :</strong> ${email}</p>
+                                <p><strong>URL :</strong> ${url}</p>
+                            </div>`
                     })
                 });
+
                 if (response.ok) {
                     document.getElementById('success-first-name').innerText = firstName;
                     document.getElementById('diag-form-container').classList.add('hidden');
                     document.getElementById('diag-success-container').classList.remove('hidden');
-                } else { throw new Error('Erreur API'); }
-            } catch (error) { alert("Une erreur technique est survenue. Contactez contact@aigyros.com"); }
-            finally { btn.disabled = false; btn.innerText = "Commander mon Diagnostic (490 €)"; }
+                } else {
+                    throw new Error('Erreur API');
+                }
+            } catch (error) { 
+                alert("Une erreur technique est survenue. Veuillez nous contacter directement à contact@aigyros.com"); 
+            } finally { 
+                btn.disabled = false; btn.innerText = "Commander mon Diagnostic (490 €)"; 
+            }
         });
 
+        // SCROLL OBSERVER
         const obs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('animate-slide'); });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animate-slide');
+            });
         }, { threshold: 0.1 });
+
         document.querySelectorAll('section').forEach(s => obs.observe(s));
     </script>
 </body>
