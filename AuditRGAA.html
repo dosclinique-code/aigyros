@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audit RGAA & Conformité 2025 | AIGYROS - Évitez les sanctions ARCOM</title>
     <meta name="description" content="Sécurisez votre site contre les sanctions ARCOM (jusqu'à 50 000 €). Expertise AIGYROS en obligation RGAA et Loi accessibilité numérique. Diagnostic Flash en 48h.">
-    <meta name="keywords" content="Sanctions ARCOM, Loi accessibilité numérique, Obligation RGAA, Audit Accessibilité, Mise en conformité web">
+    <meta name="keywords" content="Sanctions ARCOM, Loi accessibilité numérique, Obligation RGAA, Audit Accessibilité, Mise en conformité web, Article 47 loi 2005-102">
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,9 @@
                             bg: '#0F172A',
                             card: '#1E293B',
                             border: '#334155'
-                        }
+                        },
+                        error: '#EF4444',
+                        warning: '#F59E0B'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -58,11 +60,8 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px -5px rgba(32, 140, 141, 0.4);
         }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
+        .table-row-hover:hover {
+            background: rgba(32, 140, 141, 0.1);
         }
     </style>
 </head>
@@ -85,7 +84,7 @@
                 <a href="#solution" class="hover:text-teal transition-colors">Solution</a>
                 <a href="#faq" class="hover:text-teal transition-colors">FAQ</a>
             </nav>
-            <a href="#contact" class="hidden md:block bg-teal text-white px-6 py-2 rounded-full font-semibold btn-hover">Contact</a>
+            <a href="#contact" class="hidden md:block bg-teal text-white px-6 py-2 rounded-full font-semibold btn-hover">Diagnostic 48h</a>
         </div>
     </header>
 
@@ -98,22 +97,33 @@
             
             <div class="container mx-auto px-6 text-center relative z-10">
                 <span class="inline-block px-4 py-1 rounded-full border border-teal text-teal text-xs font-bold uppercase tracking-widest mb-6 bg-teal/10">
-                    Urgence 2025 : Contrôles ARCOM
+                    Urgence Légale 2025 : Contrôles ARCOM
                 </span>
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight max-w-5xl mx-auto">
                     Audit RGAA et Conformité : <span class="text-gradient">Sécurisez votre site contre les sanctions ARCOM</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto">
-                    Dès 2025, l'ARCOM lance des contrôles massifs. Ne soyez pas la prochaine cible des amendes administratives pour défaut d'accessibilité numérique.
+                    Protégez-vous des amendes jusqu'à <span class="text-white font-bold">50 000 €</span> pour non-conformité légale. Dès janvier 2024, l'ARCOM contrôle activement les sites web.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                    <a href="#solution" class="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg btn-hover w-full md:w-auto">
-                        Commander mon Diagnostic Flash (490 €)
+                    <a href="#contact" class="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg btn-hover w-full md:w-auto">
+                        Diagnostic Flash (490 €)
                     </a>
                     <a href="#loi" class="text-slate-300 hover:text-white flex items-center transition-colors">
-                        En savoir plus sur la loi
+                        Voir le cadre légal complet
                         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
+                </div>
+                
+                <!-- Urgent Alert Box -->
+                <div class="mt-16 max-w-4xl mx-auto p-6 glass-effect rounded-2xl border-l-4 border-error text-left flex gap-4">
+                    <span class="text-3xl text-error">⚠️</span>
+                    <div>
+                        <h3 class="font-bold text-error mb-1 uppercase tracking-tight">Urgence : Conformité obligatoire</h3>
+                        <p class="text-sm text-slate-300">
+                            L'ARCOM a annoncé des contrôles massifs portant sur plusieurs centaines de sites en 2025. Les amendes peuvent être renouvelées <strong>tous les 6 mois</strong> tant que la conformité n'est pas atteinte.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -121,50 +131,83 @@
         <!-- Section 2: Cadre Légal -->
         <section id="loi" class="py-20 bg-dark-card/30">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2">
-                        <h2 class="text-3xl font-bold mb-6">L'Article 47 de la loi 2005-102</h2>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Depuis 2005, l'accessibilité est un droit. L'Article 47 impose à tous les services de communication publique en ligne d'être accessibles à tous, y compris aux personnes en situation de handicap. En 2025, la tolérance zéro devient la norme.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-start p-4 glass-effect rounded-lg">
-                                <div class="bg-teal/20 p-2 rounded-lg mr-4">
-                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 italic">Article 47 de la Loi n° 2005-102</h2>
+                    <div class="h-1 w-20 bg-teal mx-auto"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-teal/20 text-teal flex items-center justify-center text-sm mr-3">01</span>
+                                Qui est concerné ?
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-teal mt-1 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Tous les organismes publics :</strong> État, collectivités, établissements publics.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-teal mt-1 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Secteur Privé :</strong> Entreprises dont le chiffre d'affaires dépasse 250 millions d'€.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-teal mt-1 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Missions Publiques :</strong> Entreprises délégataires d'une mission de service public.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-teal/20 text-teal flex items-center justify-center text-sm mr-3">02</span>
+                                Qu'est-ce que cela impose ?
+                            </h3>
+                            <p class="text-slate-400 mb-4">Le <strong>RGAA 4.1</strong> s'appuie sur les normes internationales <strong>WCAG 2.1</strong> (106 critères) et concerne :</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 glass-effect rounded-xl text-center">
+                                    <span class="block font-bold text-white">Sites Web</span>
+                                    <span class="text-xs text-slate-500">Intranets & Extranets</span>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold">Déclaration d'Accessibilité</h4>
-                                    <p class="text-sm text-slate-400">Publication obligatoire du niveau de conformité sur le site.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start p-4 glass-effect rounded-lg">
-                                <div class="bg-teal/20 p-2 rounded-lg mr-4">
-                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2"></path></svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Schéma Pluriannuel</h4>
-                                    <p class="text-sm text-slate-400">Plan de mise en accessibilité sur 3 ans, actualisé annuellement.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start p-4 glass-effect rounded-lg">
-                                <div class="bg-teal/20 p-2 rounded-lg mr-4">
-                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Mention de Conformité</h4>
-                                    <p class="text-sm text-slate-400">Affichage visible dès la page d'accueil du statut de conformité.</p>
+                                <div class="p-4 glass-effect rounded-xl text-center">
+                                    <span class="block font-bold text-white">Apps Mobiles</span>
+                                    <span class="text-xs text-slate-500">iOS & Android</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                        <div class="aspect-square bg-teal/10 border border-teal/20 rounded-3xl flex flex-col items-center justify-center p-6 text-center">
-                            <span class="text-4xl font-bold text-teal mb-2">100%</span>
-                            <span class="text-xs uppercase font-bold text-slate-400">Obligatoire</span>
-                        </div>
-                        <div class="aspect-square bg-slate-800/50 border border-slate-700 rounded-3xl flex flex-col items-center justify-center p-6 text-center mt-8">
-                            <span class="text-4xl font-bold text-white mb-2">2025</span>
-                            <span class="text-xs uppercase font-bold text-slate-400">Année Pivot</span>
+
+                    <div class="glass-effect p-8 rounded-3xl border border-teal/20">
+                        <h4 class="text-xl font-bold mb-6 text-teal">Obligations Déclaratives</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-teal/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Déclaration d'Accessibilité</h5>
+                                    <p class="text-sm text-slate-400">Publication obligatoire du niveau de conformité sur chaque site.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-teal/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2"></path></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Schéma Pluriannuel</h5>
+                                    <p class="text-sm text-slate-400">Plan de mise en accessibilité sur 3 ans, actualisé annuellement.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-teal/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Signalement & Contact</h5>
+                                    <p class="text-sm text-slate-400">Formulaire pour les défauts et contact pour les usagers handicapés.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,44 +215,63 @@
         </section>
 
         <!-- Section 3: Risques & Sanctions -->
-        <section id="sanctions" class="py-20 relative">
-            <div class="container mx-auto px-6">
+        <section id="sanctions" class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Le prix de la non-conformité</h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto">L'ARCOM dispose désormais d'un pouvoir de sanction financière directe et immédiate.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Risques Encourus : Sanctions ARCOM & DGCCRF</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto italic">Les amendes sont massives et réelles. L'ARCOM notifie désormais par mise en demeure.</p>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Sanction 1 -->
-                    <div class="p-8 border-2 border-red-500/30 bg-red-500/5 rounded-2xl relative overflow-hidden group">
-                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all"></div>
-                        <h3 class="text-xl font-bold mb-2">Défaut de conformité technique</h3>
-                        <div class="text-5xl font-extrabold text-red-500 mb-4">50 000 €</div>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Amende administrative maximale pour les sites ne respectant pas les critères du RGAA (Référentiel Général d'Amélioration de l'Accessibilité).
-                        </p>
-                        <div class="text-xs font-bold text-red-400 uppercase tracking-wider">Sanction par manquement</div>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="p-8 border-2 border-error/30 bg-error/5 rounded-2xl text-center group">
+                        <div class="text-5xl font-extrabold text-error mb-4">50 000 €</div>
+                        <h3 class="text-lg font-bold mb-2">Non-Conformité Technique</h3>
+                        <p class="text-slate-400 text-sm">Amende maximale par défaut de conformité RGAA 4.1.</p>
                     </div>
 
-                    <!-- Sanction 2 -->
-                    <div class="p-8 border-2 border-orange-500/30 bg-orange-500/5 rounded-2xl relative overflow-hidden group">
-                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all"></div>
-                        <h3 class="text-xl font-bold mb-2">Absence d'affichage légal</h3>
-                        <div class="text-5xl font-extrabold text-orange-500 mb-4">25 000 €</div>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Amende pour absence de déclaration d'accessibilité ou de schéma pluriannuel, même si le site est techniquement correct.
-                        </p>
-                        <div class="text-xs font-bold text-orange-400 uppercase tracking-wider">Défaut de transparence</div>
+                    <div class="p-8 border-2 border-warning/30 bg-warning/5 rounded-2xl text-center group">
+                        <div class="text-5xl font-extrabold text-warning mb-4">25 000 €</div>
+                        <h3 class="text-lg font-bold mb-2">Défaut de Déclaration</h3>
+                        <p class="text-slate-400 text-sm">Sanction pour absence de déclaration ou de schéma pluriannuel.</p>
+                    </div>
+
+                    <div class="p-8 border-2 border-white/10 bg-white/5 rounded-2xl text-center group">
+                        <div class="text-5xl font-extrabold text-white mb-4">3 000 €</div>
+                        <h3 class="text-lg font-bold mb-2">Astreinte / Jour</h3>
+                        <p class="text-slate-400 text-sm">Jusqu'à 300 000 € au total si le retard de mise aux normes persiste.</p>
                     </div>
                 </div>
 
-                <div class="mt-12 max-w-2xl mx-auto p-6 bg-slate-800/80 border border-slate-700 rounded-xl flex items-center space-x-4">
-                    <div class="bg-red-500/20 p-3 rounded-full">
-                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                    <div class="glass-effect p-8 rounded-2xl border-l-4 border-error">
+                        <h4 class="font-bold mb-4 text-white uppercase tracking-wider text-sm">Processus de Sanction</h4>
+                        <ol class="space-y-4">
+                            <li class="flex items-center text-sm">
+                                <span class="w-6 h-6 bg-error/20 text-error rounded-full flex items-center justify-center mr-3 font-bold">1</span>
+                                <strong>Mise en demeure :</strong> Notification officielle du manquement.
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <span class="w-6 h-6 bg-error/20 text-error rounded-full flex items-center justify-center mr-3 font-bold">2</span>
+                                <strong>Contrôle de conformité :</strong> Vérification de l'obligation.
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <span class="w-6 h-6 bg-error/20 text-error rounded-full flex items-center justify-center mr-3 font-bold">3</span>
+                                <strong>Prononcé de l'amende :</strong> Sanction administrative immédiate.
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <span class="w-6 h-6 bg-error/20 text-error rounded-full flex items-center justify-center mr-3 font-bold">4</span>
+                                <strong>Renouvellement :</strong> Possible tous les 6 mois si non résolu.
+                            </li>
+                        </ol>
                     </div>
-                    <p class="text-sm font-medium text-slate-300">
-                        <span class="text-red-400 font-bold">Important :</span> Ces amendes sont <span class="underline">renouvelables tous les 6 mois</span> tant que la mise en conformité n'est pas effective ou que les documents manquent.
-                    </p>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Impact Additionnel</h4>
+                        <ul class="space-y-4">
+                            <li class="text-slate-400 text-sm"><strong>Publicité de l'infraction :</strong> Publication publique du jugement (Bad PR).</li>
+                            <li class="text-slate-400 text-sm"><strong>DGCCRF :</strong> Pour le B2C (e-commerce), amendes jusqu'à 15 000 € en récidive.</li>
+                            <li class="text-slate-400 text-sm"><strong>Réputation :</strong> Perte de confiance des utilisateurs et clients engagés.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -217,65 +279,67 @@
         <!-- Section 4: Solution AIGYROS -->
         <section id="solution" class="py-20 bg-teal/5">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
                     <div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">La Solution AIGYROS : <span class="text-teal">Diagnostic Flash</span></h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">La Solution : <span class="text-teal">Diagnostic Flash 48h</span></h2>
                         <p class="text-slate-400 mb-8 leading-relaxed">
-                            Vous ne savez pas par où commencer ? Notre Diagnostic Flash est conçu pour vous donner une vision claire et immédiate de votre situation face aux risques de sanctions.
+                            Ne soyez pas pris au dépourvu par l'ARCOM. Obtenez une feuille de route claire et actionnable vers la conformité immédiate.
                         </p>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                                Analyse complète de 3 pages stratégiques (Accueil, Contact, Service clé)
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                                Rapport d'audit livré sous 48 heures ouvrées
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                                Identification précise des erreurs bloquantes
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                                Plan d'action priorisé pour lever les risques de sanctions
-                            </li>
-                        </ul>
-                        <div class="p-6 glass-effect rounded-2xl border-l-4 border-teal">
-                            <div class="text-3xl font-bold text-white mb-2">490 € <span class="text-sm font-normal text-slate-400">HT</span></div>
-                            <button class="w-full bg-teal hover:bg-teal-light text-white font-bold py-4 rounded-xl transition-all">Commander mon Diagnostic</button>
+                        
+                        <div class="p-6 glass-effect rounded-2xl border-2 border-teal mb-8">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-2xl font-bold">Audit de 3 pages</h3>
+                                <span class="bg-teal text-white px-4 py-1 rounded-full text-lg font-bold">490 € HT</span>
+                            </div>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>25 critères essentiels testés</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>Identification des erreurs bloquantes</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>Plan d'action priorisé</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>Estimation des correctifs</li>
+                            </ul>
+                        </div>
+
+                        <div class="overflow-x-auto rounded-xl border border-slate-700">
+                            <table class="w-full text-left text-sm">
+                                <thead class="bg-slate-800 text-teal uppercase text-xs">
+                                    <tr>
+                                        <th class="p-4">Livrable</th>
+                                        <th class="p-4">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-800">
+                                    <tr class="table-row-hover transition-colors">
+                                        <td class="p-4 font-bold text-white">Rapport d'Audit</td>
+                                        <td class="p-4 text-slate-400 italic">Analyse détaillée technique (PDF)</td>
+                                    </tr>
+                                    <tr class="table-row-hover transition-colors">
+                                        <td class="p-4 font-bold text-white">Tableau de conformité</td>
+                                        <td class="p-4 text-slate-400">Score par page et par domaine</td>
+                                    </tr>
+                                    <tr class="table-row-hover transition-colors">
+                                        <td class="p-4 font-bold text-white">Modèle de Déclaration</td>
+                                        <td class="p-4 text-slate-400">Texte pré-rempli à publier</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="absolute -inset-4 bg-teal/20 rounded-full blur-3xl"></div>
-                        <div class="relative glass-effect p-8 rounded-3xl border border-teal/30">
-                            <div class="space-y-6">
-                                <div class="h-4 bg-slate-700 rounded-full w-3/4"></div>
-                                <div class="grid grid-cols-3 gap-4">
-                                    <div class="h-24 bg-teal/20 rounded-xl border border-teal/40 flex flex-col items-center justify-center">
-                                        <div class="w-8 h-8 rounded-full bg-teal flex items-center justify-center text-xs font-bold">1</div>
-                                    </div>
-                                    <div class="h-24 bg-slate-800 rounded-xl flex flex-col items-center justify-center">
-                                        <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold">2</div>
-                                    </div>
-                                    <div class="h-24 bg-slate-800 rounded-xl flex flex-col items-center justify-center">
-                                        <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold">3</div>
-                                    </div>
-                                </div>
-                                <div class="space-y-3">
-                                    <div class="h-3 bg-slate-700 rounded-full"></div>
-                                    <div class="h-3 bg-slate-700 rounded-full"></div>
-                                    <div class="h-3 bg-slate-700 rounded-full w-5/6"></div>
-                                </div>
-                                <div class="pt-4 border-t border-slate-700">
-                                    <div class="flex justify-between items-center text-sm font-bold">
-                                        <span>Conformité Actuelle</span>
-                                        <span class="text-red-400">22%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-700 rounded-full mt-2 overflow-hidden">
-                                        <div class="h-full bg-red-400 w-[22%]"></div>
-                                    </div>
-                                </div>
+                    
+                    <div class="glass-effect p-10 rounded-3xl border border-teal/20 relative">
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-teal/10 rounded-full blur-2xl"></div>
+                        <h4 class="text-2xl font-bold mb-8">Packages Accompagnement</h4>
+                        <div class="space-y-6">
+                            <div class="p-5 bg-white/5 rounded-2xl border border-white/10 hover:border-teal transition-all cursor-default">
+                                <h5 class="font-bold text-teal mb-2">Correctifs Rapides (4-6 semaines)</h5>
+                                <p class="text-sm text-slate-400">Correction ciblée des erreurs bloquantes pour lever le risque de sanction ARCOM immédiat.</p>
+                            </div>
+                            <div class="p-5 bg-white/5 rounded-2xl border border-white/10 hover:border-teal transition-all cursor-default">
+                                <h5 class="font-bold text-teal mb-2">Remédiation Complète (8-12 semaines)</h5>
+                                <p class="text-sm text-slate-400">Conformité 100% RGAA pour une sérénité totale et une accessibilité exemplaire.</p>
+                            </div>
+                            <div class="p-5 bg-white/5 rounded-2xl border border-white/10 hover:border-teal transition-all cursor-default">
+                                <h5 class="font-bold text-teal mb-2">Maintenance & Suivi</h5>
+                                <p class="text-sm text-slate-400">Vérification trimestrielle pour maintenir votre score face aux mises à jour de contenu.</p>
                             </div>
                         </div>
                     </div>
@@ -283,7 +347,67 @@
             </div>
         </section>
 
-        <!-- Section 5: FAQ -->
+        <!-- Section 5: Impact SEO -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">L'accessibilité booste votre SEO</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="p-6 glass-effect rounded-2xl">
+                        <div class="text-teal mb-3 font-bold">Crawlabilité</div>
+                        <p class="text-xs text-slate-400">Meilleure lisibilité par les robots Google grâce au code sémantique.</p>
+                    </div>
+                    <div class="p-6 glass-effect rounded-2xl">
+                        <div class="text-teal mb-3 font-bold">Performance</div>
+                        <p class="text-xs text-slate-400">Amélioration des temps de chargement (Core Web Vitals).</p>
+                    </div>
+                    <div class="p-6 glass-effect rounded-2xl">
+                        <div class="text-teal mb-3 font-bold">User Experience</div>
+                        <p class="text-xs text-slate-400">Réduction massive du taux de rebond sur tous les supports.</p>
+                    </div>
+                    <div class="p-6 glass-effect rounded-2xl">
+                        <div class="text-teal mb-3 font-bold">Structure</div>
+                        <p class="text-xs text-slate-400">Hiérarchisation parfaite des titres (h1-h6) pour le ranking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact Form -->
+        <section id="contact" class="py-20 bg-dark-card/50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Commander votre Diagnostic Flash</h2>
+                    <p class="text-slate-400 italic">Anticipez la mise en demeure. Livraison du rapport sous 48 heures.</p>
+                </div>
+                
+                <form class="glass-effect p-10 rounded-3xl border border-teal/30 space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-300">Entreprise *</label>
+                            <input type="text" placeholder="Nom de votre société" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 focus:border-teal outline-none transition-all" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-300">URL du Site *</label>
+                            <input type="url" placeholder="https://votre-site.com" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 focus:border-teal outline-none transition-all" required>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-300">Email Professionnel *</label>
+                        <input type="email" placeholder="email@votre-entreprise.fr" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 focus:border-teal outline-none transition-all" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-300">Pages prioritaires (Optionnel)</label>
+                        <textarea placeholder="Accueil, Service, Contact..." rows="3" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 focus:border-teal outline-none transition-all resize-none"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-teal text-white py-4 rounded-xl font-bold text-lg btn-hover shadow-lg">Demander mon Diagnostic (490€ HT)</button>
+                    </div>
+                    <p class="text-center text-[10px] text-slate-500">En soumettant ce formulaire, vous acceptez d'être recontacté pour votre mise en conformité RGAA.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section 7: FAQ -->
         <section id="faq" class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="text-center mb-16">
@@ -293,50 +417,44 @@
                 <div class="space-y-4">
                     <details class="group glass-effect rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
                         <summary class="flex items-center justify-between cursor-pointer">
-                            <h3 class="font-bold text-lg">Combien de temps prend la mise en conformité ?</h3>
+                            <h3 class="font-bold text-lg">Quel est le coût total d'une mise en conformité ?</h3>
+                            <span class="ml-1.5 flex-shrink-0 rounded-full p-1.5 text-teal sm:p-3 bg-teal/10 transition group-open:-rotate-180">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="mt-4 leading-relaxed text-slate-400 space-y-2">
+                            <p>Cela dépend de la complexité de votre infrastructure :</p>
+                            <ul class="list-disc ml-5">
+                                <li><strong>Site simple :</strong> 2 000 - 5 000 €</li>
+                                <li><strong>Site moyen (50-100 pages) :</strong> 5 000 - 15 000 €</li>
+                                <li><strong>Site complexe (SaaS, e-commerce) :</strong> Jusqu'à 50 000 €</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="group glass-effect rounded-2xl p-6">
+                        <summary class="flex items-center justify-between cursor-pointer">
+                            <h3 class="font-bold text-lg">Comment l'ARCOM contrôle-t-elle les sites ?</h3>
                             <span class="ml-1.5 flex-shrink-0 rounded-full p-1.5 text-teal sm:p-3 bg-teal/10 transition group-open:-rotate-180">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </span>
                         </summary>
                         <p class="mt-4 leading-relaxed text-slate-400">
-                            Cela dépend de la taille de votre site. Le Diagnostic Flash est livré en 48h. Pour une mise en conformité complète, comptez généralement entre 2 et 6 semaines selon la complexité technique de votre CMS.
+                            Elle utilise des outils automatisés pour l'accessibilité technique et des audits manuels effectués par des testeurs en situation de handicap. Elle traite également les signalements directs des utilisateurs via son formulaire officiel.
                         </p>
                     </details>
 
                     <details class="group glass-effect rounded-2xl p-6">
                         <summary class="flex items-center justify-between cursor-pointer">
-                            <h3 class="font-bold text-lg">Le coût de 490 € comprend-il les corrections ?</h3>
+                            <h3 class="font-bold text-lg">Le diagnostic suffit-il à me protéger ?</h3>
                             <span class="ml-1.5 flex-shrink-0 rounded-full p-1.5 text-teal sm:p-3 bg-teal/10 transition group-open:-rotate-180">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </span>
                         </summary>
                         <p class="mt-4 leading-relaxed text-slate-400">
-                            Non, le Diagnostic Flash est un audit d'expert identifiant les erreurs. Nous fournissons cependant un plan d'action détaillé que vos développeurs peuvent suivre, ou nous pouvons vous proposer un devis séparé pour l'application des correctifs par nos experts.
+                            Le Diagnostic Flash vous donne une <strong>feuille de route légale</strong>. Il prouve votre bonne foi en cas de contrôle initial et vous permet d'afficher une déclaration d'accessibilité (même partielle), ce qui réduit immédiatement le risque d'amende pour "défaut de transparence" (25 000 €).
                         </p>
                     </details>
-
-                    <details class="group glass-effect rounded-2xl p-6">
-                        <summary class="flex items-center justify-between cursor-pointer">
-                            <h3 class="font-bold text-lg">Qui est concerné par l'obligation RGAA ?</h3>
-                            <span class="ml-1.5 flex-shrink-0 rounded-full p-1.5 text-teal sm:p-3 bg-teal/10 transition group-open:-rotate-180">
-                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                        </summary>
-                        <p class="mt-4 leading-relaxed text-slate-400">
-                            Le secteur public, mais aussi les entreprises privées réalisant un chiffre d'affaires supérieur à 250 millions d'euros, et plus récemment, les entreprises fournissant des services essentiels. En cas de doute, notre audit flash permet de valider votre éligibilité légale.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="bg-gradient-to-r from-teal/20 to-teal/40 rounded-3xl p-12 text-center border border-teal/30">
-                    <h2 class="text-3xl font-bold mb-6">Ne laissez pas la non-conformité menacer votre entreprise</h2>
-                    <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Contactez AIGYROS dès aujourd'hui pour obtenir votre rapport de situation et sécuriser votre présence en ligne.</p>
-                    <button class="bg-teal text-white px-10 py-4 rounded-xl font-bold text-lg btn-hover shadow-xl">Prendre rendez-vous avec un consultant</button>
                 </div>
             </div>
         </section>
@@ -354,40 +472,35 @@
                         <span class="text-xl font-bold text-white tracking-tighter">AIGYROS</span>
                     </div>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        Expertise en conformité numérique et accessibilité web. Protéger votre entreprise, inclure tous les utilisateurs.
+                        Expertise en conformité numérique et accessibilité web. Protéger votre entreprise contre les sanctions administratives.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <h4 class="text-white font-bold mb-6">Réglementation</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a href="#" class="hover:text-teal transition-colors">Audit RGAA</a></li>
-                        <li><a href="#" class="hover:text-teal transition-colors">Formation Équipes</a></li>
-                        <li><a href="#" class="hover:text-teal transition-colors">Conseil Stratégique</a></li>
-                        <li><a href="#" class="hover:text-teal transition-colors">Accompagnement ARCOM</a></li>
+                        <li><span class="hover:text-teal transition-colors">Loi n° 2005-102</span></li>
+                        <li><span class="hover:text-teal transition-colors">Décret 2019-768</span></li>
+                        <li><span class="hover:text-teal transition-colors">RGAA 4.1</span></li>
+                        <li><span class="hover:text-teal transition-colors">WCAG 2.1 AAA</span></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6">Légal</h4>
+                    <h4 class="text-white font-bold mb-6">AIGYROS</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
                         <li><a href="#" class="hover:text-teal transition-colors">Mentions Légales</a></li>
                         <li><a href="#" class="hover:text-teal transition-colors">Politique de Confidentialité</a></li>
                         <li><a href="#" class="hover:text-teal transition-colors">CGV</a></li>
-                        <li><a href="#" class="hover:text-teal transition-colors">Accessibilité : Totale</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Recrutement</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6">Newsletter</h4>
-                    <p class="text-sm text-slate-500 mb-4">Recevez les dernières alertes réglementaires ARCOM.</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Votre email" class="bg-slate-900 border border-slate-800 rounded-l-lg px-4 py-2 w-full focus:outline-none focus:border-teal text-sm">
-                        <button class="bg-teal px-4 py-2 rounded-r-lg hover:bg-teal-light transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </button>
-                    </div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <p class="text-sm text-slate-500 mb-4">Urgence ARCOM ou besoin d'audit ?</p>
+                    <button class="bg-teal px-6 py-2 rounded-lg text-white font-bold text-sm btn-hover">Nous appeler</button>
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-900 text-center text-slate-600 text-xs">
-                &copy; 2024 AIGYROS. Tous droits réservés. Page conforme WCAG 2.1 AAA.
+                &copy; 2025 AIGYROS. Expertise RGAA. Page conforme WCAG 2.1 AAA.
             </div>
         </div>
     </footer>
